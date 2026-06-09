@@ -120,14 +120,13 @@
   /* ===== BRAND MEANING ===== */
   .meaning{background:var(--cream-warm);position:relative;overflow:hidden}
   .meaning-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
-  .meaning-mark{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,var(--emerald-deep),var(--emerald));border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 60px -20px rgba(13,59,46,.35);overflow:hidden;padding:50px;text-align:center}
+  .meaning-mark{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,var(--emerald-deep),var(--emerald));border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 60px -20px rgba(13,59,46,.35);overflow:hidden;padding:44px;text-align:center}
   .meaning-mark::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23c9a24a' stroke-width='.5' opacity='.4'><circle cx='100' cy='100' r='88'/><circle cx='100' cy='100' r='66'/><polygon points='100,12 175,55 175,145 100,188 25,145 25,55'/><polygon points='100,34 156,67 156,133 100,166 44,133 44,67'/></g></svg>");background-size:cover}
-  .meaning-mark-name{position:relative;z-index:1;font-family:'Amiri',serif;font-size:clamp(64px,8vw,110px);color:var(--gold-soft);direction:rtl;line-height:1;margin-bottom:14px;text-shadow:0 4px 20px rgba(0,0,0,.25);letter-spacing:2px}
-  .meaning-mark-translit{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--cream);margin-bottom:30px;opacity:.85}
-  .meaning-mark-divider{position:relative;z-index:1;width:60px;height:1px;background:var(--gold-soft);opacity:.6;margin-bottom:28px}
-  .meaning-mark-words{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;width:100%;max-width:300px}
+  .meaning-mark img{position:relative;z-index:1;max-height:48%;width:auto;margin-bottom:18px}
+  .meaning-mark-divider{position:relative;z-index:1;width:60px;height:1px;background:var(--gold-soft);opacity:.6;margin-bottom:24px}
+  .meaning-mark-words{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;width:100%;max-width:300px}
   .meaning-mark-word{display:flex;flex-direction:column;align-items:center;gap:2px}
-  .meaning-mark-word .ar{font-family:'Amiri',serif;font-size:24px;color:var(--gold-soft);direction:rtl;line-height:1}
+  .meaning-mark-word .ar{font-family:'Amiri',serif;font-size:22px;color:var(--gold-soft);direction:rtl;line-height:1}
   .meaning-mark-word .en{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cream);opacity:.7;font-weight:500}
   .meaning-body .section-eyebrow{margin-bottom:16px}
   .meaning-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:500;color:var(--emerald-deep);line-height:1.12;margin-bottom:22px;letter-spacing:-.3px}
@@ -355,11 +354,10 @@
     .form-row{grid-template-columns:1fr}
     .hero-badge{left:-14px;bottom:-18px;padding:14px 18px}
     .footer-bottom{flex-direction:column;text-align:center}
-    .meaning-mark{padding:38px}
-    .meaning-mark-name{font-size:72px}
-    .meaning-mark-translit{font-size:18px;margin-bottom:22px}
+    .meaning-mark{padding:34px}
+    .meaning-mark img{max-height:42%}
     .meaning-mark-words{gap:14px 20px;max-width:260px}
-    .meaning-mark-word .ar{font-size:20px}
+    .meaning-mark-word .ar{font-size:19px}
     .about-visual{padding:44px 32px}
     .about-visual-quote{font-size:21px}
     .ed-feature-card{padding:32px 26px}
@@ -470,8 +468,7 @@
     <div class="container">
       <div class="meaning-grid">
         <div class="meaning-mark">
-          <div class="meaning-mark-name">الأمان</div>
-          <div class="meaning-mark-translit">Al-Aman</div>
+          <img src="logo-light.png" alt="Al-Aman">
           <div class="meaning-mark-divider"></div>
           <div class="meaning-mark-words">
             <div class="meaning-mark-word">
