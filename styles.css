@@ -403,6 +403,8 @@
   .partner-point span{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
 
   /* ===== SHARIAH PANEL (Sarah Ali & Co) — dedicated section on About page ===== */
+  /* Tone down the background pattern for this content-dense card so text is not visually competing */
+  .partner-section.alt .partner-card::before{opacity:.35}
   .panel-header{text-align:center;margin-bottom:40px;position:relative;z-index:1}
   .panel-eyebrow{font-family:'Outfit',sans-serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;opacity:.9}
   .panel-firm-name{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4.8vw,54px);color:var(--cream);font-weight:500;line-height:1.05;margin-bottom:12px;letter-spacing:-.3px}
