@@ -314,6 +314,11 @@
   .service-tag{font-size:11px;padding:5px 12px;background:rgba(13,59,46,.06);color:var(--emerald);border-radius:999px;letter-spacing:.5px;font-weight:500}
   .service-tag.highlight{background:var(--gold);color:var(--emerald-deep);font-weight:600}
 
+  /* Service note - small muted footnote under the tags, e.g. Syariah legal safety-net notes */
+  .service-note{margin-top:20px;padding-top:16px;border-top:1px solid rgba(201,162,74,.25);font-family:'Outfit',sans-serif;font-size:12.5px;line-height:1.6;color:var(--ink-soft);max-width:680px;opacity:.9}
+  .service-note-label{display:inline-block;font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-right:6px}
+  .service-note-more{color:var(--gold-deep);font-weight:500;white-space:nowrap}
+
   .executor-spotlight{background:var(--cream);border:1px solid var(--gold);border-left:4px solid var(--gold);border-radius:14px;padding:22px 26px;margin-top:20px;display:flex;align-items:flex-start;gap:16px;max-width:680px}
   .executor-spotlight-icon{width:44px;height:44px;background:var(--emerald-deep);border-radius:12px;display:grid;place-items:center;color:var(--gold-soft);flex-shrink:0}
   .executor-spotlight strong{display:block;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--emerald-deep);margin-bottom:4px;font-weight:600}
