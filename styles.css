@@ -1,3 +1,4 @@
+  html{scroll-behavior:smooth}
   :root{
     --emerald-deep:#0d3b2e;
     --emerald:#1a5d4a;
@@ -406,7 +407,7 @@
   .panel-line-text strong{font-style:normal;font-weight:600;color:var(--gold-deep)}
 
   /* ===== GAT & SHARIAH PANEL DETAILED (About) ===== */
-  .partner-section{padding:120px 40px;background:var(--cream);position:relative;overflow:hidden;scroll-margin-top:88px}
+  .partner-section{padding:120px 40px;background:var(--cream);position:relative;overflow:hidden;scroll-margin-top:100px}
   .partner-section.alt{background:var(--cream-warm)}
   .partner-inner{max-width:980px;margin:0 auto;position:relative;z-index:1}
   .partner-header{text-align:center;margin-bottom:56px;max-width:720px;margin-left:auto;margin-right:auto}
