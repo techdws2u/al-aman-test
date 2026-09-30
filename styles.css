@@ -315,6 +315,38 @@
   .service-tag{font-size:11px;padding:5px 12px;background:rgba(13,59,46,.06);color:var(--emerald);border-radius:999px;letter-spacing:.5px;font-weight:500}
   .service-tag.highlight{background:var(--gold);color:var(--emerald-deep);font-weight:600}
 
+  /* ===== LEGAL DOCUMENT PAGES (Refund, Terms, Privacy) ===== */
+  .legal-hero{background:linear-gradient(180deg,var(--cream-warm) 0%,var(--cream) 100%);padding:100px 40px 60px;text-align:center;position:relative}
+  .legal-hero::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,74,.3),transparent)}
+  .legal-hero-inner{max-width:820px;margin:0 auto}
+  .legal-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.5vw,48px);color:var(--emerald-deep);font-weight:500;line-height:1.1;margin:14px 0 20px;letter-spacing:-.3px}
+  .legal-hero h1 em{font-style:italic;color:var(--gold-deep)}
+  .legal-hero h1 .hero-sep{color:var(--gold);opacity:.5;font-weight:400;margin:0 6px}
+  .legal-hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-soft);line-height:1.55;max-width:640px;margin:0 auto;opacity:.85}
+  .legal-hero-jump{margin-top:22px}
+  .legal-hero-jump a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-deep);font-weight:600;text-decoration:none;padding:8px 16px;border:1px solid rgba(201,162,74,.4);border-radius:999px;transition:all .2s;display:inline-block}
+  .legal-hero-jump a:hover{background:rgba(201,162,74,.08);border-color:var(--gold)}
+
+  .legal-doc{max-width:760px;margin:0 auto;padding:60px 40px 100px}
+  .legal-lang{margin-bottom:20px;scroll-margin-top:100px}
+  .legal-lang-label{font-family:'Outfit',sans-serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:14px;opacity:.9}
+  .legal-lang h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.5vw,38px);color:var(--emerald-deep);font-weight:500;line-height:1.15;margin-bottom:28px;letter-spacing:-.3px}
+  .legal-lang h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--emerald-deep);font-weight:600;margin:32px 0 12px;letter-spacing:-.2px}
+  .legal-lang h4{font-family:'Outfit',sans-serif;font-size:14px;color:var(--emerald-deep);font-weight:600;margin:24px 0 10px;letter-spacing:.2px}
+  .legal-lang p{font-size:15.5px;line-height:1.75;color:var(--ink);margin-bottom:16px}
+  .legal-lang p strong{color:var(--emerald-deep);font-weight:600}
+  .legal-lang a{color:var(--gold-deep);text-decoration:underline;text-decoration-color:rgba(201,162,74,.4);text-underline-offset:2px}
+  .legal-lang a:hover{color:var(--gold)}
+  .legal-lang ul,.legal-lang ol{margin:0 0 20px 24px;padding:0}
+  .legal-lang li{font-size:15.5px;line-height:1.75;color:var(--ink);margin-bottom:8px}
+  .legal-lang-note{margin-top:32px;padding-top:20px;border-top:1px solid rgba(201,162,74,.25);font-size:13.5px;line-height:1.65;color:var(--ink-soft);font-style:italic;opacity:.9}
+  .legal-clause{margin-bottom:28px}
+  .legal-clause-num{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:6px;opacity:.85}
+  .legal-sub{padding-left:20px;margin-bottom:12px}
+  .legal-back-to-top{text-align:center;margin-top:60px;padding-top:32px;border-top:1px solid var(--line)}
+  .legal-back-to-top a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;padding:10px 20px;border:1px solid rgba(201,162,74,.4);border-radius:999px;transition:all .2s;display:inline-block}
+  .legal-back-to-top a:hover{background:rgba(201,162,74,.08);border-color:var(--gold)}
+
   /* Service note - small muted footnote under the tags, e.g. Syariah legal safety-net notes */
   .service-note{margin-top:20px;padding-top:16px;border-top:1px solid rgba(201,162,74,.25);font-family:'Outfit',sans-serif;font-size:12.5px;line-height:1.6;color:var(--ink-soft);max-width:680px;opacity:.9}
   .service-note-label{display:inline-block;font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-right:6px}
@@ -609,6 +641,13 @@
     .hero-banner{padding:0 24px}
     .hero-banner-image{aspect-ratio:16/9;margin-top:-24px}
     .opening-prose{padding:60px 24px 30px}
+    .legal-hero{padding:70px 24px 40px}
+    .legal-hero h1{font-size:28px}
+    .legal-hero h1 .hero-sep{display:block;margin:6px 0;font-size:.6em}
+    .legal-hero-sub{font-size:15px}
+    .legal-doc{padding:40px 24px 60px}
+    .legal-lang h2{font-size:26px;margin-bottom:22px}
+    .legal-lang p,.legal-lang li{font-size:15px}
     .opening-prose p{font-size:18px}
     .journey{padding:0 24px 40px}
     .step{grid-template-columns:1fr;gap:24px;margin-bottom:64px}
