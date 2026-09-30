@@ -323,7 +323,8 @@
   .legal-hero h1 em{font-style:italic;color:var(--gold-deep)}
   .legal-hero h1 .hero-sep{color:var(--gold);opacity:.5;font-weight:400;margin:0 6px}
   .legal-hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-soft);line-height:1.55;max-width:640px;margin:0 auto;opacity:.85}
-  .legal-hero-jump{margin-top:22px}
+  .legal-hero-updated{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:20px;opacity:.75}
+  .legal-hero-jump{margin-top:14px}
   .legal-hero-jump a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-deep);font-weight:600;text-decoration:none;padding:8px 16px;border:1px solid rgba(201,162,74,.4);border-radius:999px;transition:all .2s;display:inline-block}
   .legal-hero-jump a:hover{background:rgba(201,162,74,.08);border-color:var(--gold)}
 
