@@ -428,6 +428,7 @@
   .footer-legal{max-width:560px;line-height:1.65}
   .footer-legal strong{color:var(--cream);font-weight:600}
   .footer-legal-reg{display:block;font-size:12px;opacity:.8;margin-top:2px}
+  .footer-legal a,.footer-legal-reg a,.footer-legal-parent a{color:inherit;text-decoration:none;pointer-events:none}
   .footer-legal-parent{display:block;font-size:12px;opacity:.8;font-style:italic;margin-top:2px}
   .footer-copyright{font-size:12.5px;opacity:.75;text-align:right;padding-top:4px}
 
@@ -714,9 +715,9 @@
     .meaning-mark-word .ar{font-size:19px}
     .about-visual{padding:44px 32px;aspect-ratio:auto;min-height:420px}
     .hero-photo-wrap{aspect-ratio:1/1.1;max-width:100%;margin-top:32px}
-    .hero-verse-overlay{right:-10px;bottom:-16px;padding:20px 18px;max-width:180px}
-    .hero-verse-overlay-ar{font-size:16px;line-height:1.85}
-    .hero-verse-overlay-en{font-size:11px}
+    .hero-verse-overlay{position:static;right:auto;bottom:auto;max-width:100%;margin:20px auto 0;padding:24px 22px}
+    .hero-verse-overlay-ar{font-size:18px;line-height:2}
+    .hero-verse-overlay-en{font-size:13px}
     .story-photo-wrap{aspect-ratio:1/1;min-height:320px}
     .story-pullquote{font-size:17px;padding-left:18px}
     .about-visual-quote{font-size:21px}
