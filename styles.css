@@ -715,9 +715,9 @@
     .meaning-mark-word .ar{font-size:19px}
     .about-visual{padding:44px 32px;aspect-ratio:auto;min-height:420px}
     .hero-photo-wrap{aspect-ratio:1/1.1;max-width:100%;margin-top:32px}
-    .hero-verse-overlay{position:static;right:auto;bottom:auto;max-width:100%;margin:20px auto 0;padding:24px 22px}
-    .hero-verse-overlay-ar{font-size:18px;line-height:2}
-    .hero-verse-overlay-en{font-size:13px}
+    .hero-verse-overlay{display:none !important}
+    .meaning-pillars{grid-template-columns:1fr !important;gap:12px}
+    .meaning-body,.meaning-pillars{width:100%;max-width:100%;min-width:0}
     .story-photo-wrap{aspect-ratio:1/1;min-height:320px}
     .story-pullquote{font-size:17px;padding-left:18px}
     .about-visual-quote{font-size:21px}
