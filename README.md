@@ -1,156 +1,154 @@
-# Al-Aman Website — v4
+# Al-Aman — Wasiat & Hibah
 
-Bilingual (EN + BM) multi-page static site with photo frames prepared for warm imagery.
+Islamic legacy planning platform landing site. Shariah-compliant Wasiat and Hibah services for Muslim families in Malaysia.
 
-## What's new in v4
+**Operated by:** DWS Wealth Partners Sdn. Bhd. (Company Reg. No. 202301038491 / 1532413-X), a subsidiary of Global Asset Trustee (M) Berhad.
 
-- **Home hero:** verse card replaced with a **photo frame + small verse overlay** in the bottom-right corner
-- **About "Our Story":** promise-quote emerald box replaced with a **story photo frame**, promise quote moved to a pullquote below the paragraphs
-- **Copy cuts:** Services (Wasiat + Hibah bodies) and About (GAT + Shariah Panel bodies) rewritten to feel warmer and less formal
-- All changes applied to **both EN and BM** pages
+**Live site:** [https://techdws2u.github.io/al-aman-test/](https://techdws2u.github.io/al-aman-test/)
+*(Will move to `al-aman.dws2u.com` when the site goes to production.)*
 
-## File structure
+---
+
+## Site architecture
+
+**Bahasa Malaysia is the default language.** English lives in the `/en/` subfolder.
 
 ```
-al-aman-website/
-├── index.html         (EN Home — with hero photo frame)
-├── about.html         (EN About — with story photo frame)
-├── services.html      (EN Services — with warmer copy)
-├── education.html
-├── contact.html
-├── styles.css
-├── logo-dark.png
+/                          ← Bahasa Malaysia (default)
+├── index.html             Home
+├── about.html             Tentang Kami (About Us)
+├── services.html          Produk & Perkhidmatan (Products & Services)
+├── how-it-works.html      Cara Ia Berfungsi (How It Works)
+├── contact.html           Hubungi Kami (Contact)
+├── refund.html            Dasar Bayaran Balik (Refund Policy)
+├── terms.html             Terma dan Syarat (Terms and Conditions)
+├── privacy.html           Dasar Privasi (Privacy Policy)
+│
+├── styles.css             Shared stylesheet for all 16 pages
+│
+├── logo-dark.png          Logo variants
 ├── logo-light.png
-├── ms/
-│   ├── index.html     (BM Home — with hero photo frame)
-│   ├── about.html     (BM About — with story photo frame)
-│   ├── services.html  (BM Services — with warmer copy)
-│   ├── education.html
-│   └── contact.html
-└── README.md
+├── gat-logo.png
+├── hero-family.jpg        Content images
+├── about-story.jpg
+├── how-it-works.jpeg
+├── journey-01.jpg … journey-04.jpeg
+├── sarah-ali-team.jpeg
+├── sarah-ali-founder.jpeg
+│
+├── en/                    ← English mirrors
+│   ├── index.html
+│   ├── about.html
+│   ├── services.html
+│   ├── how-it-works.html
+│   ├── contact.html
+│   ├── refund.html
+│   ├── terms.html
+│   └── privacy.html
+│
+└── ms/                    Legacy redirect stubs (forward to root)
 ```
 
-## How to slot in your photos (step-by-step)
+**16 pages in total:** 8 BM at root + 8 EN inside `/en/`.
 
-Right now, the site shows dashed-outline placeholder boxes where your photos will go. Each placeholder describes exactly what photo it needs, its aspect ratio, and its focal-point requirements.
+**Legal pages note:** Each legal page (refund, terms, privacy) is a **single file containing both languages** — BM section first, divider ornament, then EN section — with a jump-to-English button in the hero. The `/en/` versions are the same file reversed (EN first, then BM) with English nav and footer.
 
-### Step 1 — Buy two photos from Getty / Adobe Stock
+---
 
-**Photo 1 — for Home hero**
-- Search terms to try:
-  - `muslim mother children home candid`
-  - `hijab woman family kitchen natural light`
-  - `malaysian family lifestyle authentic`
-  - `muslim woman writing desk documentary`
-- Requirements:
-  - **Portrait orientation** (taller than wide, roughly 4:5 or 3:4 aspect)
-  - **Focal point should be upper-left** (the subject's face should sit in the top-left area of the frame — because the verse card will overlay the bottom-right corner)
-  - Warm natural light, unposed, candid
-  - Ideally 1200×1380px or larger
+## Design system
 
-**Photo 2 — for About "Our Story"**
-- Search terms to try:
-  - `multi generation muslim family hands`
-  - `grandmother granddaughter hijab candid`
-  - `malaysian family portrait warm`
-  - `muslim family embrace natural light`
-- Requirements:
-  - **Portrait orientation** (roughly 1:1.1 aspect)
-  - **Subject centered** (no overlay to worry about)
-  - Three generations if possible — grandmother, mother, child — or a hands-focused composition (writing, holding, embracing)
-  - Warm natural light, unposed
+**Colour palette:**
+- Emerald deep: `#0d3b2e` (primary brand)
+- Gold deep: `#c9a24a` (accents, ornaments)
+- Cream warm: `#faf6ee` (section backgrounds)
 
-### Step 2 — Rename the photos
+**Typography:**
+- **Cormorant Garamond** — serif, used for headlines
+- **Outfit** — sans-serif, used for body text, buttons, nav
+- **Amiri** — Arabic calligraphy (Quranic verse)
 
-Rename the two files exactly like this before uploading:
-- `hero-family.jpg` (for the Home hero)
-- `about-story.jpg` (for the About story)
+**Terminology conventions:**
+- "Islamic Legacy Planning" (EN) / "Perancangan Legasi Islam" (BM)
+- "Shariah" (EN) / "Syariah" (BM)
+- "wasiyy" spelling for Wasiat-related references
+- "wasi sokongan" = backup executor
+- "DWS Wealth Partners Sdn. Bhd." = formal legal entity
+- "DWS2U" = consumer-facing brand name
 
-(You can also use `.png` or `.webp` — just make sure the filename matches what you put in the HTML.)
+---
 
-### Step 3 — Upload the photos to your GitHub repo
+## Technology
 
-Drag both files into the **root of your repo** (the same folder where `index.html` and `logo-dark.png` live). Don't put them in the `ms/` folder — the BM pages already reference the root using `../`.
+**Plain static HTML, CSS, and vanilla JavaScript.** No build step, no framework, no server-side code.
 
-### Step 4 — Edit the HTML to point to your photos
+- Hosted on **GitHub Pages**
+- No dependencies to install — just edit the files and push
+- Fonts loaded from Google Fonts CDN
 
-You need to make 4 edits — one on each of these pages. In each case, look for the HTML comment that tells you exactly what to do.
+---
 
-**A) `index.html` (EN Home)**
+## How to make common edits
 
-Find this block (around line 76):
+### Change copy on a page
+Open the relevant `.html` file in any text editor, find the text, change it, commit the file. If you change BM copy, remember to change the matching EN copy in the mirror file at `/en/`.
 
-```html
-<div class="hero-photo">
-  <!-- REPLACE THIS PLACEHOLDER BLOCK WITH: <img src="hero-family.jpg" alt="Muslim family at home"> -->
-  <div class="hero-photo-placeholder">
-    ... lots of placeholder markup ...
-  </div>
-</div>
-```
+### Change the "Last updated" date on legal pages
+The three legal pages (`refund.html`, `terms.html`, `privacy.html` in both BM and EN) currently show **"Last updated: 30 September 2026"** as a placeholder. Search each file for that string and replace with the actual date. Six files to update in total.
 
-Delete the entire `<div class="hero-photo-placeholder"> ... </div>` block and replace with the one-line image tag from the comment:
+### Add a new link to a footer
+Every page has the same four-column footer. If you add a new link to one page's footer (e.g., a new legal page), you need to add it to **all 16 pages** to keep them consistent — 8 BM at root + 8 EN in `/en/`.
 
-```html
-<div class="hero-photo">
-  <img src="hero-family.jpg" alt="Muslim family at home">
-</div>
-```
+### Update contact details
+Phone number, email, and office address live inside `contact.html` (BM) and `en/contact.html` (EN). The contact form uses `mailto:hello@al-aman.com.my` and opens the visitor's own email client with the form data pre-filled.
 
-**B) `ms/index.html` (BM Home)**
+### Change the YouTube video on the Services page
+Search `services.html` and `en/services.html` for the current video ID (`mKqgR5rnvKA`) and swap it with the new YouTube video ID.
 
-Same block. Delete the placeholder and use:
+### Update the Shariah panel or GAT partner section
+These live inside `about.html` and `en/about.html`, anchored at `#shariah-panel` and `#gat` respectively.
 
-```html
-<div class="hero-photo">
-  <img src="../hero-family.jpg" alt="Keluarga Muslim di rumah">
-</div>
-```
+---
 
-⚠️ **Note the `../`** — the BM pages live in `/ms/` so they need to go up one folder to reach the photo in the root.
+## Mobile responsive notes
 
-**C) `about.html` (EN About)**
+- **Breakpoints:** `≤980px` (tablet), `≤720px` (phone), `≤380px` (small phone)
+- **Hero on mobile home page:** uses separate inline elements (`.hero-photo-mobile` and `.hero-verse-mobile`) that only show on screens ≤720px; the desktop hero visual is hidden on mobile
+- **iOS phone-number auto-linking** is disabled via `<meta name="format-detection" content="telephone=no">` on every page to prevent iOS Safari from turning the registration number into a blue phone link in the footer
+- **Horizontal scroll guard** — `html, body { overflow-x: hidden; max-width: 100vw }` prevents stray overflow on any page
 
-Find the block around line 65 that starts with `<div class="story-photo-wrap">`. Delete the entire `<div class="story-photo-placeholder"> ... </div>` block and replace with:
+---
 
-```html
-<div class="story-photo-wrap">
-  <img src="about-story.jpg" alt="Muslim family across three generations">
-</div>
-```
+## Deployment
 
-**D) `ms/about.html` (BM About)**
+Push changes to the GitHub repository (`techdws2u/al-aman-test`) and GitHub Pages redeploys automatically within 1–2 minutes.
 
-Same block. Delete the placeholder and use:
+**iOS Safari caches CSS aggressively.** After pushing a style change, if the site still looks old on iPhone:
+1. Close Safari fully (swipe up on the app card)
+2. Reopen Safari and visit the site
+3. If still cached: Settings app → Safari → **Clear History and Website Data**
 
-```html
-<div class="story-photo-wrap">
-  <img src="../about-story.jpg" alt="Keluarga Muslim tiga generasi">
-</div>
-```
+Testing in Chrome or another browser is a good control if you're unsure whether the fix deployed or iOS cached the old version.
 
-### Step 5 — Commit and check
+---
 
-After uploading the two photos and making the four edits, commit the changes on GitHub. Wait ~1 minute for GitHub Pages to rebuild, then hard-refresh your live site (Cmd+Shift+R on Mac). Your photos should now be showing.
+## Known pending items
 
-## Troubleshooting
+- [ ] Wire real login/signup URLs — currently `#login` and `#start` placeholders across all 16 pages
+- [ ] Deploy to production subdomain `al-aman.dws2u.com`
+- [ ] Replace "Last updated: 30 September 2026" placeholder on all 6 legal pages with the actual date
+- [ ] Standardize contact email — Refund page uses `hello@al-aman.com.my`, Terms and Privacy use `aisyah@al-aman.com.my` (preserved from source legal docs)
+- [ ] Blog / articles page (future)
+- [ ] Replace temporary YouTube video (currently unlisted) when the public version is ready
+- [ ] Receive final transparent logo files from designer and swap `logo-dark.png` / `logo-light.png`
+- [ ] (Optional) Replace mailto contact form with a server-side form service (Formspree, Web3Forms) for better delivery reliability
 
-**Photo looks stretched or awkwardly cropped:**
-- The photo's aspect ratio is too far off from what the frame expects. Home hero wants ~1:1.15 (portrait), About story wants ~1:1.1 (portrait). Try a different photo, or crop yours in Preview/Photoshop before uploading.
+---
 
-**Photo shows in Home but the verse card covers the subject's face:**
-- The photo's focal point is centered instead of upper-left. Either crop the photo so the face sits higher/lefter, or choose a different photo.
+## Contact
 
-**Photo doesn't show at all (broken image icon):**
-- Check the filename matches exactly, including capitalization. On GitHub Pages, `Hero-Family.jpg` and `hero-family.jpg` are different files.
-- Check the path: EN pages use `hero-family.jpg`, BM pages use `../hero-family.jpg`.
-
-**Still stuck:**
-- Right-click the broken image, "Open image in new tab" — the URL will show you exactly where the browser is looking. If it's a 404, the photo isn't at that path.
-
-## Still to do
-
-- The Login (`#login`) and Get Started (`#start`) buttons point to anchors — replace with your real platform URLs.
-- The contact form shows a client-side success message. Connect it to your email service (Formspree, EmailJS, or a backend).
-- Have your Shariah advisory team verify the Quranic verse translations.
-- Article link buttons and blog cards currently don't lead anywhere. Wire them up when the individual article pages exist.
+**Careline:** Aisyah — [+60 12-206 7931](https://wa.me/60122067931)
+**General enquiries:** [hello@al-aman.com.my](mailto:hello@al-aman.com.my)
+**Office:**
+CT3-13, Level 13, Corporate Tower 3,
+Pavilion Damansara Heights, 3, Jalan Damanlela,
+Bukit Damansara, 50490 Kuala Lumpur
