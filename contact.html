@@ -60,7 +60,7 @@
             </div>
             <div>
               <strong>E-mel</strong>
-              <a href="mailto:hello@al-aman.my">hello@al-aman.my</a>
+              <a href="mailto:hello@al-aman.com.my">hello@al-aman.com.my</a>
             </div>
           </div>
 
@@ -70,7 +70,7 @@
             </div>
             <div>
               <strong>Telefon / WhatsApp</strong>
-              <a href="tel:+60312345678">+60 3-1234 5678</a>
+              <a href="https://wa.me/60122067931">+60 12-206 7931</a>
             </div>
           </div>
 
@@ -80,17 +80,7 @@
             </div>
             <div>
               <strong>Pejabat</strong>
-              <span>Kuala Lumpur, Malaysia</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <strong>Waktu</strong>
-              <span>Isnin–Jumaat, 9:00 pagi – 6:00 petang MYT</span>
+              <span>CT3-13, Level 13,<br>Corporate Tower 3,<br>Pavilion Damansara Heights, 3,<br>Jalan Damanlela, Bukit Damansara,<br>50490 Kuala Lumpur</span>
             </div>
           </div>
         </div>
@@ -99,21 +89,21 @@
           <div class="form-row">
             <div class="form-group">
               <label>Nama Penuh <span>*</span></label>
-              <input type="text" required placeholder="Ahmad bin Abdullah">
+              <input type="text" id="f_name" required placeholder="Ahmad bin Abdullah">
             </div>
             <div class="form-group">
               <label>E-mel <span>*</span></label>
-              <input type="email" required placeholder="ahmad@email.com">
+              <input type="email" id="f_email" required placeholder="ahmad@email.com">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Telefon <span>*</span></label>
-              <input type="tel" required placeholder="+60 12-345 6789">
+              <input type="tel" id="f_phone" required placeholder="+60 12-345 6789">
             </div>
             <div class="form-group">
               <label>Saya berminat dengan</label>
-              <select>
+              <select id="f_interest">
                 <option>Wasiat</option>
                 <option>Hibah</option>
                 <option>Wasi Profesional</option>
@@ -123,10 +113,10 @@
           </div>
           <div class="form-group">
             <label>Bagaimana kami boleh membantu? <span>*</span></label>
-            <textarea required placeholder="Ceritakan kepada kami tentang keadaan anda..."></textarea>
+            <textarea id="f_message" required placeholder="Ceritakan kepada kami tentang keadaan anda..."></textarea>
           </div>
           <button type="submit" class="form-submit">Hantar Mesej</button>
-          <div class="form-success" id="formSuccess">✓ Terima kasih. Pasukan kami akan menghubungi anda dalam masa satu hari bekerja, insyaAllah.</div>
+          <div class="form-success" id="formSuccess">✓ Terima kasih. Pelanggan e-mel anda akan dibuka untuk anda menghantar mesej. Pasukan kami akan menghubungi anda dalam masa satu hari bekerja, insyaAllah.</div>
         </form>
       </div>
     </div>
@@ -187,9 +177,16 @@
   }
   function submitForm(e){
     e.preventDefault();
+    const name = document.getElementById('f_name').value.trim();
+    const email = document.getElementById('f_email').value.trim();
+    const phone = document.getElementById('f_phone').value.trim();
+    const interest = document.getElementById('f_interest').value;
+    const message = document.getElementById('f_message').value.trim();
+    const subject = 'Pertanyaan Al-Aman: ' + interest + ' — ' + name;
+    const body = 'Nama: ' + name + '\nE-mel: ' + email + '\nTelefon: ' + phone + '\nBerminat dengan: ' + interest + '\n\nMesej:\n' + message;
+    window.location.href = 'mailto:hello@al-aman.com.my?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     document.getElementById('formSuccess').classList.add('show');
-    e.target.reset();
-    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 6000);
+    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 8000);
   }
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
