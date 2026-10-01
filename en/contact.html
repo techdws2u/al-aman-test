@@ -60,7 +60,7 @@
             </div>
             <div>
               <strong>Email</strong>
-              <a href="mailto:hello@al-aman.my">hello@al-aman.my</a>
+              <a href="mailto:hello@al-aman.com.my">hello@al-aman.com.my</a>
             </div>
           </div>
 
@@ -70,7 +70,7 @@
             </div>
             <div>
               <strong>Phone / WhatsApp</strong>
-              <a href="tel:+60312345678">+60 3-1234 5678</a>
+              <a href="https://wa.me/60122067931">+60 12-206 7931</a>
             </div>
           </div>
 
@@ -80,17 +80,7 @@
             </div>
             <div>
               <strong>Office</strong>
-              <span>Kuala Lumpur, Malaysia</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <strong>Hours</strong>
-              <span>Mon–Fri, 9am – 6pm MYT</span>
+              <span>CT3-13, Level 13,<br>Corporate Tower 3,<br>Pavilion Damansara Heights, 3,<br>Jalan Damanlela, Bukit Damansara,<br>50490 Kuala Lumpur</span>
             </div>
           </div>
         </div>
@@ -99,21 +89,21 @@
           <div class="form-row">
             <div class="form-group">
               <label>Full Name <span>*</span></label>
-              <input type="text" required placeholder="Ahmad bin Abdullah">
+              <input type="text" id="f_name" required placeholder="Ahmad bin Abdullah">
             </div>
             <div class="form-group">
               <label>Email <span>*</span></label>
-              <input type="email" required placeholder="ahmad@email.com">
+              <input type="email" id="f_email" required placeholder="ahmad@email.com">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Phone <span>*</span></label>
-              <input type="tel" required placeholder="+60 12-345 6789">
+              <input type="tel" id="f_phone" required placeholder="+60 12-345 6789">
             </div>
             <div class="form-group">
               <label>I'm interested in</label>
-              <select>
+              <select id="f_interest">
                 <option>Wasiat</option>
                 <option>Hibah</option>
                 <option>Professional Executor</option>
@@ -123,10 +113,10 @@
           </div>
           <div class="form-group">
             <label>How can we help? <span>*</span></label>
-            <textarea required placeholder="Tell us about your situation..."></textarea>
+            <textarea id="f_message" required placeholder="Tell us about your situation..."></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
-          <div class="form-success" id="formSuccess">✓ Thank you. Our team will reach out within one business day, insyaAllah.</div>
+          <div class="form-success" id="formSuccess">✓ Thank you. Your email client will open so you can send the message. Our team will reach out within one business day, insyaAllah.</div>
         </form>
       </div>
     </div>
@@ -191,9 +181,16 @@
   }
   function submitForm(e){
     e.preventDefault();
+    const name = document.getElementById('f_name').value.trim();
+    const email = document.getElementById('f_email').value.trim();
+    const phone = document.getElementById('f_phone').value.trim();
+    const interest = document.getElementById('f_interest').value;
+    const message = document.getElementById('f_message').value.trim();
+    const subject = 'Al-Aman enquiry: ' + interest + ' — ' + name;
+    const body = 'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nInterested in: ' + interest + '\n\nMessage:\n' + message;
+    window.location.href = 'mailto:hello@al-aman.com.my?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     document.getElementById('formSuccess').classList.add('show');
-    e.target.reset();
-    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 6000);
+    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 8000);
   }
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
