@@ -418,6 +418,10 @@
   .footer-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
   .footer-brand .logo img{height:88px;width:auto}
   .footer-brand p{margin-top:24px;font-size:13.5px;line-height:1.7;max-width:360px}
+  .footer-social{display:flex;gap:12px;margin-top:22px}
+  .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(249,246,238,.22);border-radius:50%;color:var(--cream);transition:all .25s ease;text-decoration:none}
+  .footer-social a:hover{border-color:var(--gold-soft);color:var(--gold-soft);background:rgba(201,162,74,.08);transform:translateY(-1px)}
+  .footer-social svg{width:16px;height:16px;display:block}
   .footer-col h5{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-soft);margin-bottom:20px;font-weight:600}
   .footer-col ul{list-style:none}
   .footer-col ul li{margin-bottom:10px}

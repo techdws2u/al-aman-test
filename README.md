@@ -152,3 +152,9 @@ Testing in Chrome or another browser is a good control if you're unsure whether 
 CT3-13, Level 13, Corporate Tower 3,
 Pavilion Damansara Heights, 3, Jalan Damanlela,
 Bukit Damansara, 50490 Kuala Lumpur
+
+**Social media:**
+- Facebook: [@al.amanwasiathibah](https://www.facebook.com/al.amanwasiathibah)
+- Instagram: [@al.amanwasiathibah](https://www.instagram.com/al.amanwasiathibah)
+
+Social icons are linked in the footer of every page. To change the URLs, search all 16 HTML files for `footer-social` and update the two `href` values. To change the icons themselves, update the inline SVGs in the same block.
