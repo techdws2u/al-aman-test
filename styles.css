@@ -696,6 +696,9 @@
 
   /* ===== MOBILE ===== */
   @media(max-width:720px){
+    .rrm-services > div{grid-template-columns:1fr 1fr !important;gap:10px !important}
+    .rrm-services > div > div{padding:16px 10px !important}
+    .rrm-services > div > div > div:last-child{font-size:14px !important}
     .nav{padding:12px 18px;gap:8px}
     .logo img{height:46px}
     nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-soft)}
